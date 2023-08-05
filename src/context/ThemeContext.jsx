@@ -9,6 +9,7 @@ export const ThemeProvider = ({ children }) => {
     background: "bg-gray-700",
     text: "text-white",
     hover: "text-red-400",
+    textLight: "text-gray-400",
   };
 
   const day = {
@@ -16,6 +17,7 @@ export const ThemeProvider = ({ children }) => {
     background: "bg-white",
     text: "text-black",
     hover: "text-red-400",
+    textLight: "text-gray-400",
   };
   const [color, setColor] = useState("day");
 
