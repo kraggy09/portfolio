@@ -6,9 +6,9 @@ export const ThemeContext = createContext({});
 export const ThemeProvider = ({ children }) => {
   const night = {
     name: "night",
-    background: "bg-gray-700",
+    background: "bg-gray-800",
     text: "text-white",
-    hover: "text-red-400",
+    hover: "text-orange-600",
     textLight: "text-gray-400",
   };
 
@@ -16,7 +16,7 @@ export const ThemeProvider = ({ children }) => {
     name: "day",
     background: "bg-white",
     text: "text-black",
-    hover: "text-red-400",
+    hover: "text-orange-600",
     textLight: "text-gray-400",
   };
   const [color, setColor] = useState("day");

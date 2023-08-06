@@ -11,7 +11,11 @@ const Navbar = () => {
   console.log(theme);
   return (
     <nav
-      className={`flex fixed top-0 shadow-sm shadow-gray-400 left-0 w-full py-7 items-center text-lg px-16 justify-between ${theme?.background} `}
+      className={`flex fixed top-0 shadow-sm ${
+        color === "day" ? "shadow-gray-900" : "shadow-gray-400"
+      } left-0 w-full py-4 items-center z-10 text-lg px-16 justify-between ${
+        theme?.background
+      } `}
     >
       <span className="font-bold hover:text-red-400 text-2xl">Kaif.dev</span>
       <ul className="flex">
