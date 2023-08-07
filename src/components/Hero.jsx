@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
+
 import {
   AiOutlineArrowDown,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
+import { SiLeetcode } from "react-icons/si";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Hero = () => {
@@ -37,6 +39,14 @@ const Hero = () => {
               href="https://www.github.com/kraggy09"
             >
               <AiFillGithub size={30} />
+            </a>
+            <a
+              target="_blank"
+              className={`mx-2 hover:${theme?.hover}`}
+              rel="noreferrer"
+              href="https://www.leetcode.com/kraggy"
+            >
+              <SiLeetcode size={30} />
             </a>
             <a
               href="/resume.pdf"
