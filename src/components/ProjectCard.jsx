@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
         <h1 className="mx-auto text-2xl font-bold uppercase text-orange-600 my-3">
           {project.name}
         </h1>
-        <h3 className={`${theme.textLight} text-center mx-20 text-lg my-3`}>
+        <h3 className={`${theme?.textLight} text-center mx-20 text-lg my-3`}>
           {project.desc}
         </h3>
         <div className="flex items-center  justify-center">
