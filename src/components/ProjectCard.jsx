@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
         ref={div}
         onMouseEnter={onMouseOver}
         onMouseLeave={onMouseRemove}
-        className=" hover:cursor-pointer lg:max-h-[400px] border-2 rounded-xl max-h-[300px]  mx-auto scrollbar-hide overflow-y-scroll w-[75vw] duration-8000 lg:w-1/2"
+        className="hover:cursor-pointer lg:max-h-[400px] border-2 rounded-xl max-h-[300px]  mx-auto scrollbar-hide overflow-y-scroll w-[75vw] duration-8000 lg:w-1/2"
       >
         <img
           className="rounded-xl transition-all duration-8000 ease-linear"
