@@ -6,10 +6,10 @@ const About = () => {
       id="about"
       className="pt-32 w-full lg:h-[100vh]  flex-col lg:flex-row flex"
     >
-      <div className="lg:w-[40vw] flex items-center justify-center  w-full ">
+      <div className="lg:w-[40vw] px-6 flex items-center justify-center  w-full ">
         <img
           src="/laptop.webp"
-          className="h-[380px]   rounded-xl w-[400px]"
+          className="md:h-[380px] rounded-xl w-[400px]"
           alt="Laptop"
         />
       </div>

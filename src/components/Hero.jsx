@@ -63,10 +63,10 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="h-full px-6 md:px-0 ">
+        <div className="h-full px-6 md:px-36 lg:px-0 ">
           <img
             src="/mine.png"
-            className="h-full lg:h-96  lg:mx-0 mb-6 lg:mb-0 border-2 border-orange-600 rounded-full hover:cursor-pointer hover:scale-120"
+            className="h-full lg:h-96   lg:mx-0 mb-6 lg:mb-0 border-2 border-orange-600 rounded-full hover:cursor-pointer hover:scale-120"
             alt=""
           />
         </div>
