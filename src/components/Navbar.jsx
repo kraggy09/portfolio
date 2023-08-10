@@ -10,7 +10,6 @@ const Navbar = () => {
     useContext(ThemeContext);
   const [nav, setNav] = useState(false);
 
-  console.log(theme);
   return (
     <nav
       className={`flex fixed top-0 shadow-sm ${
@@ -92,7 +91,6 @@ const Navbar = () => {
         <AiOutlineClose
           onClick={() => {
             setNav(!nav);
-            console.log(!nav);
           }}
           className="absolute top-2 right-3 hover:text-orange-600 hover:cursor-pointer ease-in duration-300"
           size={35}
@@ -168,7 +166,6 @@ const Navbar = () => {
       <div
         onClick={() => {
           setNav(!nav);
-          console.log(!nav);
         }}
         className="lg:hidden block"
       >

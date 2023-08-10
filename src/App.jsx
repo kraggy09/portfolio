@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 const App = () => {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
   const bg = theme?.background;
   const txt = theme?.text;
   return (

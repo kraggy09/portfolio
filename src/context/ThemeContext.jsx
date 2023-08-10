@@ -27,7 +27,6 @@ export const ThemeProvider = ({ children }) => {
   const hours = date.getHours();
 
   const defaultTheme = () => {
-    console.log(hours);
     if (hours >= 17) {
       setTheme(night);
       setColor("day");
@@ -41,7 +40,6 @@ export const ThemeProvider = ({ children }) => {
   }, [hours]);
 
   const handleThemeChange = (color) => {
-    console.log("ThemeChanged");
     if (color === "night") {
       setTheme(night);
       setColor("day");
