@@ -39,16 +39,18 @@ const Projects = () => {
   return (
     <div id="project" className=" pt-10">
       <div className="px-16 lg:px-0">
-        <h1 className="uppercase text-3xl text-orange-600 font-extrabold my-3 ">
+        <h1 className="uppercase text-xl md:text-2xl text-center lg:text-start lg:text-3xl text-orange-600 font-extrabold my-3 ">
           PORTFOLIO
         </h1>
-        <h3 className="text-3xl font-semibold">
+        <h3 className="lg:text-3xl text-2xl text-center lg:text-start font-semibold">
           Each project is a unique piece of development 🧩
         </h3>
       </div>
-      {projects.map((item) => {
-        return <ProjectCard key={item.id} project={item} />;
-      })}
+      <div className="flex flex-col items-center">
+        {projects.map((item) => {
+          return <ProjectCard key={item.id} project={item} />;
+        })}
+      </div>
     </div>
   );
 };

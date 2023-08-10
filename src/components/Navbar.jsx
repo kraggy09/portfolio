@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { BsFillMoonFill, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
@@ -7,7 +8,6 @@ import { ThemeContext } from "../context/ThemeContext";
 const Navbar = () => {
   const { theme, handleThemeChange, setTheme, color, setColor } =
     useContext(ThemeContext);
-  const [scroll, setScroll] = useState(0);
   const [nav, setNav] = useState(false);
 
   console.log(theme);
@@ -45,14 +45,40 @@ const Navbar = () => {
             </span>
           </Link>
 
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            <button
+          <span
+            className={`hover:cursor-pointer rounded-2xl  border-2 ${
+              color === "night" && "border-black"
+            } flex items-center justify-between w-[120px]`}
+          >
+            {/** <button
               onClick={() => {
                 handleThemeChange(color);
               }}
             >
-              {color === "day" ? "Night" : "Day"}
-            </button>
+              {color === "day" ? (
+                <span className="flex items-center justify-center">
+                  <BsFillMoonFill />
+                </span>
+              ) : (
+                "Day"
+              )}
+            </button> */}
+            <div
+              className={`px-5 py-1 rounded-xl ${
+                color === "day" && "bg-orange-600 text-white"
+              }`}
+              onClick={() => handleThemeChange(color)}
+            >
+              <BsMoonFill />
+            </div>
+            <div
+              className={`px-5 py-1 rounded-xl  ${
+                color === "night" && "bg-orange-600 text-white"
+              }`}
+              onClick={() => handleThemeChange(color)}
+            >
+              <BsSunFill />
+            </div>
           </span>
         </ul>
       </div>
@@ -114,16 +140,28 @@ const Navbar = () => {
           >
             <li>Contacts</li>
           </Link>
-
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            <button
-              onClick={() => {
-                handleThemeChange(color);
-                setNav(!nav);
-              }}
+          <span
+            className={`hover:cursor-pointer rounded-2xl mt-6  border-2 ${
+              color === "night" && "border-black"
+            } flex items-center justify-between w-[120px]`}
+            onClick={() => setNav(!nav)}
+          >
+            <div
+              className={`px-5 py-1 rounded-xl ${
+                color === "day" && "bg-orange-600 text-white"
+              }`}
+              onClick={() => handleThemeChange(color)}
             >
-              {color === "day" ? "Night" : "Day"}
-            </button>
+              <BsMoonFill />
+            </div>
+            <div
+              className={`px-5 py-1 rounded-xl  ${
+                color === "night" && "bg-orange-600 text-white"
+              }`}
+              onClick={() => handleThemeChange(color)}
+            >
+              <BsSunFill />
+            </div>
           </span>
         </ul>
       </div>

@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
   const [img, setImg] = useState("lap");
 
   return (
-    <div className="w-full flex flex-col lg:flex-row transition-all duration-1000 ease-in-out my-16 shadow-xl ">
+    <div className="lg:w-full w-[90vw] md:w-[80vw] flex flex-col lg:flex-row transition-all duration-1000 ease-in-out my-16 shadow-2xl rounded-xl ">
       <div
         id="left"
         ref={div}
