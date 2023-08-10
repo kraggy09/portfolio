@@ -12,10 +12,10 @@ const App = () => {
   const txt = theme?.text;
   return (
     <div
-      className={`w-full transition-colors duration-300 ease-in-out h-full ${bg} ${txt} `}
+      className={`w-full  transition-colors scrollbar scrollbar-track-inherit scrollbar-thumb-orange-600 duration-300 ease-in-out h-full ${bg} ${txt} `}
     >
       <Navbar />
-      <div className="mx-52 mt-6">
+      <div className="lg:mx-52 mt-6">
         <Hero />
         <About />
         <Projects />

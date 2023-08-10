@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add this to your CSS */
+.scroll-slow {
+  scroll-behavior: smooth;
+  transition-duration: 8s; /* 8 seconds */
+}

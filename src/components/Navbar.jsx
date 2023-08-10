@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -7,6 +8,7 @@ const Navbar = () => {
   const { theme, handleThemeChange, setTheme, color, setColor } =
     useContext(ThemeContext);
   const [scroll, setScroll] = useState(0);
+  const [nav, setNav] = useState(false);
 
   console.log(theme);
   return (
@@ -18,40 +20,132 @@ const Navbar = () => {
       } `}
     >
       <span className="font-bold hover:text-red-400 text-2xl">Kaif.dev</span>
-      <ul className="flex">
-        <Link to="home" smooth={true} duration={500}>
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            Home
-          </span>
-        </Link>
-        <Link to="about" smooth={true} duration={500}>
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            About
-          </span>
-        </Link>
+      <div className="lg:block hidden">
+        <ul className="flex ">
+          <Link to="home" smooth={true} duration={500}>
+            <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+              Home
+            </span>
+          </Link>
+          <Link to="about" smooth={true} duration={500}>
+            <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+              About
+            </span>
+          </Link>
 
-        <Link to="project" smooth={true} duration={500}>
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            Projects
-          </span>
-        </Link>
+          <Link to="project" smooth={true} duration={500}>
+            <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+              Projects
+            </span>
+          </Link>
 
-        <Link to="contact" smooth={true} duration={500}>
-          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-            Contact
-          </span>
-        </Link>
+          <Link to="contact" smooth={true} duration={500}>
+            <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+              Contact
+            </span>
+          </Link>
 
-        <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
-          <button
+          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+            <button
+              onClick={() => {
+                handleThemeChange(color);
+              }}
+            >
+              {color === "day" ? "Night" : "Day"}
+            </button>
+          </span>
+        </ul>
+      </div>
+      <div
+        className={
+          nav
+            ? `h-[100vh] fixed left-0 top-0 w-[100%]  ease-in-out duration-500  ${theme?.background}`
+            : "fixed left-[-100%]"
+        }
+      >
+        <AiOutlineClose
+          onClick={() => {
+            setNav(!nav);
+            console.log(!nav);
+          }}
+          className="absolute top-2 right-3 hover:text-orange-600 hover:cursor-pointer ease-in duration-300"
+          size={35}
+        />
+        <ul
+          className={`${
+            nav
+              ? "flex h-[90vh] z-3 flex-col items-center ease-in justify-center"
+              : ""
+          }`}
+        >
+          <Link
+            to="home"
             onClick={() => {
-              handleThemeChange(color);
+              setNav(!nav);
             }}
+            className="px-2 my-5 text-xl font-bold hover:text-orange-600 ease-in duration-300 hover:cursor-pointer"
           >
-            {color === "day" ? "Night" : "Day"}
-          </button>
-        </span>
-      </ul>
+            <li>Home</li>
+          </Link>
+          <Link
+            onClick={() => {
+              setNav(!nav);
+            }}
+            to="about"
+            className="px-2 my-5 text-xl font-bold hover:text-orange-600 ease-in duration-300 hover:cursor-pointer"
+          >
+            <li>About</li>
+          </Link>
+          <Link
+            onClick={() => {
+              setNav(!nav);
+            }}
+            to="project"
+            className="px-2 my-5 text-xl font-bold hover:text-orange-600 ease-in duration-300 hover:cursor-pointer"
+          >
+            <li>Projects</li>
+          </Link>
+          <Link
+            onClick={() => {
+              setNav(!nav);
+            }}
+            to="contact"
+            className="px-2 my-5 text-xl font-bold hover:text-orange-600 ease-in duration-300 hover:cursor-pointer"
+          >
+            <li>Contacts</li>
+          </Link>
+
+          <span className={`hover:cursor-pointer px-6 hover:${theme?.hover}`}>
+            <button
+              onClick={() => {
+                handleThemeChange(color);
+                setNav(!nav);
+              }}
+            >
+              {color === "day" ? "Night" : "Day"}
+            </button>
+          </span>
+        </ul>
+      </div>
+      <div
+        onClick={() => {
+          setNav(!nav);
+          console.log(!nav);
+        }}
+        className="lg:hidden block"
+      >
+        {!nav ? (
+          <AiOutlineMenu
+            className="hover:text-orange-600 hover:cursor-pointer ease-in duration-300"
+            size={35}
+          />
+        ) : (
+          <AiOutlineClose
+            className="hover:text-orange-600 hover:cursor-pointer ease-in duration-300"
+            size={35}
+          />
+        )}
+      </div>
     </nav>
   );
 };
