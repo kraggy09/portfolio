@@ -6,9 +6,17 @@ import { FaMobileAlt } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
   const { theme } = useContext(ThemeContext);
+  const [loading, setLoading] = useState(false);
 
   const div = useRef(null);
 
+  const handleImgChange = (value) => {
+    setLoading(true);
+    setImg(value);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
   const onMouseOver = () => {
     div.current.scrollTo({
       left: 0,
@@ -35,16 +43,20 @@ const ProjectCard = ({ project }) => {
         onMouseLeave={onMouseRemove}
         className="hover:cursor-pointer lg:max-h-[400px] border-2 rounded-xl md:max-h-[300px]  max-h-[450px] mx-auto scrollbar-hide overflow-y-scroll w-[75vw] duration-8000 lg:w-1/2"
       >
-        <img
-          className="rounded-xl transition-all duration-8000 ease-linear"
-          src={
-            img === "lap"
-              ? project.img
-              : img === "tab"
-              ? project.tab
-              : project.mob
-          }
-        />
+        {loading ? (
+          <div className="w-[80vw] p-6 bg-gray-400 animate-pulse h-[80vh] items-center justify-center flex"></div>
+        ) : (
+          <img
+            className="rounded-xl transition-all duration-8000 ease-linear"
+            src={
+              img === "lap"
+                ? project.img
+                : img === "tab"
+                ? project.tab
+                : project.mob
+            }
+          />
+        )}
       </div>
       <div id="right" className="text-center w-full lg:mx-6 lg:w-1/2">
         <h1 className="mx-auto text-3xl my-6 lg:text-2xl text-center font-bold uppercase text-orange-600 lg:my-3">
@@ -73,21 +85,21 @@ const ProjectCard = ({ project }) => {
             className={`mx-3 hover:text-orange-600 ${
               img === "mob" && "text-orange-600"
             } hover:cursor-pointer`}
-            onClick={() => setImg("mob")}
+            onClick={() => handleImgChange("mob")}
           />
           <AiOutlineTablet
             size={30}
             className={`mx-3 hover:text-orange-600 ${
               img === "tab" && "text-orange-600"
             } hover:cursor-pointer`}
-            onClick={() => setImg("tab")}
+            onClick={() => handleImgChange("tab")}
           />{" "}
           <AiOutlineLaptop
             size={30}
             className={`mx-3 hover:text-orange-600 ${
               img === "lap" && "text-orange-600"
             } hover:cursor-pointer`}
-            onClick={() => setImg("lap")}
+            onClick={() => handleImgChange("lap")}
           />
         </div>
         <div className="flex items-center justify-center text-xl mx-auto py-14 w-full">
