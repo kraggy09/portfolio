@@ -32,7 +32,7 @@ const Projects = () => {
       img: "/bitbolt.jpg",
       tab: "/bitbolt_tab.jpg",
       mob: "/bitbolt_mob.jpg",
-      desc: "A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars.",
+      desc: "BitBolt is a website that can be used to track various cryptocurrencies. User can save their coins and check for some of the trending coins in todays world!",
       stack: ["ReactJs", "TailwindCSS"],
     },
   ];
