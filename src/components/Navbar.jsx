@@ -8,6 +8,7 @@ import { ThemeContext } from "../context/ThemeContext";
 const Navbar = () => {
   const { theme, handleThemeChange, setTheme, color, setColor } =
     useContext(ThemeContext);
+  const [scrollHeight, setscrollHeight] = useState(0);
   const [nav, setNav] = useState(false);
 
   return (
