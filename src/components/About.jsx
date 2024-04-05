@@ -8,7 +8,7 @@ const About = () => {
     >
       <div className="lg:w-[40vw] px-6 flex items-center justify-center  w-full ">
         <img
-          src="/laptop.webp"
+          src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315314/portfolio/hbawv9mdexrnf42808xh.webp"
           className="md:h-[380px] rounded-xl w-[400px]"
           alt="Laptop"
         />

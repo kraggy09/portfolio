@@ -16,7 +16,10 @@ const Hero = () => {
         <div className="lg:w-1/2 flex flex-col lg:items-start justify-center ">
           <h1 className="lg:text-5xl text-3xl md:text-4xl text-center lg:text-left font-bold">
             Front-End React Developer
-            <img src="/hi.gif" className="inline   h-10 w-10" />
+            <img
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315312/portfolio/pwguufnkcu0arlgnvhqq.gif"
+              className="inline   h-10 w-10"
+            />
           </h1>
           <h2
             className={`md:text-2xl mx-3 md:mx-0 text-xl text-center lg:text-start mt-6 ${theme?.textLight}`}
@@ -65,7 +68,7 @@ const Hero = () => {
         </div>
         <div className="h-full px-6 md:px-36 lg:px-0 ">
           <img
-            src="/mine.png"
+            src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315314/portfolio/cabr3oarmz1imt3ljlgs.png"
             className="h-full lg:h-96   lg:mx-0 mb-6 lg:mb-0 border-2 border-orange-600 rounded-full hover:cursor-pointer hover:scale-120"
             alt=""
           />
@@ -87,7 +90,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/html.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315312/portfolio/cgaidjlvtynjmfdudrnz.png"
               className="md:h-16 md:w-16 h-8 w-8  rounded-full"
             />
           </div>
@@ -95,7 +98,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/css.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315312/portfolio/yx7hatad7vh7qppqqkxv.png"
               className="md:h-16 md:w-16 h-8 w-8  rounded-full"
             />
           </div>
@@ -103,7 +106,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/js.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315313/portfolio/tzbekjulbei9us1b1rje.png"
               className="md:h-16 md:w-16 h-8 w-8  rounded-full"
             />
           </div>
@@ -111,7 +114,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/react.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315315/portfolio/iqmodavmijd4nchq0hsr.png"
               className="hover:animate-spin md:h-16 md:w-16 h-8 w-8  rounded-full"
             />
           </div>
@@ -119,7 +122,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/redux.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315315/portfolio/ivp8bsbbnfsmwot2z9rv.png"
               className="md:h-16 md:w-16 h-8 w-8  rounded-full"
             />
           </div>
@@ -128,7 +131,7 @@ const Hero = () => {
             className={`my-6 md:my-0 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer mx-6 rounded-full  h-10 w-10 md:h-20 md:w-20 flex items-center justify-center shadow-gray-400`}
           >
             <img
-              src="/tailwind.png"
+              src="https://res.cloudinary.com/dvof5uyrw/image/upload/v1712315315/portfolio/sfdxto4idqxgw5djwxrz.png"
               className="md:h-16 md:w-16 h-8 w-8  object-fit rounded-full"
             />
           </div>
